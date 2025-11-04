@@ -16,6 +16,10 @@ Run the following command in your terminal
 pnpm install
 ```
 
+```bash
+pnpm approve-builds
+```
+
 Once the packages are installed you are ready to run astro. Astro comes with a built-in development server that has everything you need for project development. The astro dev command will start the local development server so that you can see your new website in action for the very first time.
 
 ```bash
@@ -79,10 +83,10 @@ pnpm run dev
 
 You can change global site configuration on '/src/config.ts' file:
 
-- **SITE_TITLE**: Default pages title.
-- **SITE_DESCRIPTION**: Default pages title.
-- **GENERATE_SLUG_FROM_TITLE**: By default Astrofy will generate the blog slug pages base on the article name. Set this var to false if you want to use the Astro file base (Compatible with Astrofy older versions).
-- **TRANSITION_API**: Enable and disable transition API
+- __SITE_TITLE__: Default pages title.
+- __SITE_DESCRIPTION__: Default pages title.
+- __GENERATE_SLUG_FROM_TITLE__: By default Astrofy will generate the blog slug pages base on the article name. Set this var to false if you want to use the Astro file base (Compatible with Astrofy older versions).
+- __TRANSITION_API__: Enable and disable transition API
 
 ### Components usage
 
@@ -100,7 +104,7 @@ The used social-icons are SVG form [BoxIcons](https://boxicons.com/) pack. You c
 
 To add a new page in the sidebar go to the `SideBarMenu` component.
 
-```
+```sh
 <li><a class="py-3 text-base" id="home" href="/">Home</a></li>
 
 ```
@@ -124,7 +128,7 @@ The timeline components are used to confirm the CV.
 
 #### Card & HorizontalCard
 
-The cards are primarly used for the Project and the Blog components. They include a picture, a title, and a description. 
+The cards are primarly used for the Project and the Blog components. They include a picture, a title, and a description.
 
 ```html
 <HorizontalCard title="Card Title" img="imge_url" desc="Description" url="Link
@@ -133,7 +137,6 @@ tags={['Array','of','tags']} />
 ```
 
 #### HorizontalCard Shop Item
-
 
 This component is already included in the Store layout of the template. In case you want to use it in another place these are the props.
 
@@ -155,11 +158,11 @@ This component is already included in the Store layout of the template. In case 
 
 #### Adding a Custom Component
 
-To add a custom component, you can create a .astro file in the components folder under the source folder. 
+To add a custom component, you can create a .astro file in the components folder under the source folder.
 
-Components must follow this template. The ```---``` represents the code fence and uses Javascript and can be used for imports. 
+Components must follow this template. The `---` represents the code fence and uses Javascript and can be used for imports.
 
-The HTML component is the actual style of your new component. 
+The HTML component is the actual style of your new component.
 
 ```html
 ---
@@ -168,13 +171,13 @@ The HTML component is the actual style of your new component.
 <!-- Component Template (HTML + JS Expressions) -->
 ```
 
-For more details, see the [astro components](https://docs.astro.build/en/core-concepts/astro-components/) documentation here. 
+For more details, see the [astro components](https://docs.astro.build/en/core-concepts/astro-components/) documentation here.
 
 ### Layouts
 
 Include `BaseLayout` in each page you add and `PostLayout` to your post pages.
 
-The BaseLayout defines a general template for each new webpage you want to add. It imports constants SITE_TITLE and SITE_DESCRIPTION which can be modified in the ```../config``` folder. Data placed there can be imported anywhere using import. 
+The BaseLayout defines a general template for each new webpage you want to add. It imports constants SITE_TITLE and SITE_DESCRIPTION which can be modified in the `../config` folder. Data placed there can be imported anywhere using import.
 
 ### Content
 
@@ -192,7 +195,7 @@ Add your `md` blog post in the `/content/blog/` folder.
 
 Add code with this format in the top of each post file.
 
-```
+```yaml
 ---
 title: "Post Title"
 description: "Description"
